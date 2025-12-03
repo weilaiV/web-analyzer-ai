@@ -53,7 +53,7 @@ export async function POST(req: Request) {
     const chatCompletion = await client.chat.completions.create({
       messages: [{ role: 'user', content: prompt }],
       // 修改后的代码：
-      model: model || 'deepseek-chat', 
+      model: model || 'ep-20251203202708-4hm4c', 
       response_format: { type: "json_object" },
     });
 
