@@ -52,7 +52,8 @@ export async function POST(req: Request) {
 
     const chatCompletion = await client.chat.completions.create({
       messages: [{ role: 'user', content: prompt }],
-      model: model || 'gpt-3.5-turbo',
+      // 修改后的代码：
+      model: model || 'deepseek-chat', 
       response_format: { type: "json_object" },
     });
 
