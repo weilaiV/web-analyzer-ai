@@ -54,7 +54,6 @@ export async function POST(req: Request) {
       messages: [{ role: 'user', content: prompt }],
       // 修改后的代码：
       model: model || 'ep-20251203202708-4hm4c', 
-      response_format: { type: "json_object" },
     });
 
     const aiResult = JSON.parse(chatCompletion.choices[0].message.content || '{}');
